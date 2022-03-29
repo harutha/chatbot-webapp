@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block title %} - this is how you can contact us{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div style="text-align:center">
+      <h2>Contact Us</h2>
+      <p>To learn more about animals, leave us a message:</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="/static/images/img5.jpg" style="width:90%">
+      </div>
+      <div class="column">
+        <form>
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your Email..">
+          <label for="country">Continent</label>
+          <select id="country" name="country">
+            <option value="asia">AFRICA</option>
+            <option value="antarctica">ANTARCTICA</option>
+            <option value="africa">ASIA</option>
+            <option value="europe">EUROPE</option>
+            <option value="america">NORTH AMERICA</option>
+            <option value="america">SOUTH AMERICA</option>
+          </select>
+          <label for="subject">Type Your Message</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <!-- <input type="submit" value="Submit"> -->
+          <a href="result" class="submit">Submit</a>
+          <!-- <input type="submit" onclick="location.href='result.html';" value="Submit" /> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- <h1>Follow us on</h1>
+
+  <div class="container-2">
+      <div class="card">
+          <div class="bg-1"></div>
+          <div class="bg-2"></div>
+          <div class="icon-box">
+              <div class="icon"><a href="https://en-gb.facebook.com/">
+                  <i class="fa-brands fa-facebook-f"></a></i>
+
+              </div>
+          </div>
+          <span class="title-c">
+              Facebook
+
+              <span>70k Followers</span>
+          </span>
+      </div>
+
+      <div class="card">
+          <div class="bg-1"></div>
+          <div class="bg-2"></div>
+          <div class="icon-box">
+              <div class="icon"><a href="https://www.tiktok.com/en/">
+                  <i class="fa-brands fa-tiktok"></a></i>
+
+              </div>
+          </div>
+          <span class="title-c">
+              TikTok
+
+              <span>80k Followers</span>
+          </span>
+      </div>
+
+      <div class="card">
+          <div class="bg-1"></div>
+          <div class="bg-2"></div>
+          <div class="icon-box">
+              <div class="icon"><a href="https://twitter.com/?lang=en">
+                  <i class="fa-brands fa-twitter"></a></i>
+              </div>
+          </div>
+          <span class="title-c">
+              Twitter
+
+              <span>99k Followers</span>
+          </span>
+      </div>
+
+      <div class="card">
+          <div class="bg-1"></div>
+          <div class="bg-2"></div>
+          <div class="icon-box">
+              <div class="icon"><a href="https://www.instagram.com/">
+                  <i class="fa-brands fa-instagram-square"></a></i>
+              </div>
+          </div>
+          <span class="title-c">
+              Instagram
+
+              <span>89k Followers</span>
+          </span>
+      </div>
+
+  </div> -->
+{% endblock %}

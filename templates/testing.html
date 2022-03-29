@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} - for testing{% endblock %}
+
+{% block content %}
+
+<img src="{{url_for('static', filename = 'testingg.jpg')}}" alt="animal abuse" width="500">
+<ul>
+    <li>Animal testing</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}ChatBot{% endblock %}
+
+{% block content %}
+<header>
+    <h1>This it the Chatbot page</h1>
+    <p>Click here</p>
+</header>
+<main>
+    <h2>This is Chatbot</h2>
+    <div>
+        <div id="thebot">
+            <h3>TheBot says:</h3>
+            {% for answer in answer_list %}
+            <h2>{{ answer }}</h2>
+            {% endfor %}
+            <br>
+            <br>
+            <form role="form" method="POST" action="/chatbot">
+                <div id="questionbox">
+                    <input
+                    type="text"
+                    name="message"
+                    id="messagebox"
+                    placeholder="enter the question here"
+                    style="max-width: 300px;"
+                    autofocus required
+                    >
+                </input>
+                </div>
+                <button type="submit">submit</button>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}
+<!-- <body>
+    <header>
+        <h1>this it the chatbot page</h1>
+        <p>welcome to chatbot</a></p>
+    </header>
+    <main>
+        <h2>this is chatbot</h2>
+        <div>
+            <div id="thebot">
+                <h3>TheBot says:</h3>
+                {% for answer in answer_list %}
+                <h2>{{ answer }}</h2>
+                {% endfor %}
+                <br>
+                <br>
+                <form role="form" method="POST" action="/chatbot">
+                    <div id="questionbox">
+                        <input
+                        type="text"
+                        name="message"
+                        id="messagebox"
+                        placeholder="enter the question here"
+                        style="max-width: 300px;"
+                        autofocus required
+                        >
+                    </input>
+                    </div>
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body> -->

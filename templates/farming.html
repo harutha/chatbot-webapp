@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %} - We Can Stop It!{% endblock %}
+
+{% block content %}
+
+<div class="desktop mobile">
+    <div class="top-row">
+        <div class="top-column">
+            <img src="/static/images/speciesism.jpg" class="speciesism">
+        </div>
+        <div class="top-column-two">
+            <h2>Worldwide, more than 70 billion land animals and more than 90 billion marine animals are killed for food every year.</h2>
+        </div>   
+    </div>
+</div>
+
+
+<br>
+<button onclick="sendAlert()">
+    <p >Press me</p>
+</button>
+<br>
+<br>
+
+<div class="text">
+    <!-- <h2>
+        Animals Used for Food
+    </h2>
+    <p class="paragraph">
+        On today’s farms, animals used for food are crammed by the thousands into filthy, windowless sheds or stuffed into wire cages, metal crates, and other torturous devices. Billions of fish—along with “nontarget” animals, including sharks, sea turtles, birds, seals, and whales—are caught each year by the commercial fishing industry. Animals used for food will never raise their families, root around in the soil, build nests, or do anything else that’s natural and important to them. Most won’t even feel the warmth of the sun on their backs or breathe fresh air until the day they’re loaded onto trucks headed for slaughterhouses.
+    </p> -->
+
+    <h2>
+        What Is ‘Factory Farming’?
+    </h2>
+
+    <p class="paragraph">
+        The overwhelming majority of animal-derived foods sold in the world today—including meat, eggs, milk, and cheese—come from large-scale, industrialized farms known as “concentrated animal-feeding operations.” On these “factory farms,” animals are packed in as tightly as possible to maximize output and profit, even though this causes many to die from disease or infection before being sent to the slaughterhouse.
+    </p>
+
+    <h2>
+        Animals Used for Food Endure Constant Fear and Torment
+    </h2>
+
+    <ul class="paragraph">
+        <li>
+            They’re often given so little space that they can’t even turn around or lie down comfortably. Egg-laying hens are kept in small cages, chickens and pigs are kept in jam-packed sheds, and cows are kept on crowded, filthy feedlots.
+        </li>
+        <li>
+            Animals endure mutilations such as debeaking, dehorning, and castration without painkillers.
+        </li>
+        <li>
+            Most farmed animals have been genetically manipulated to grow larger or to produce more milk or eggs than they naturally would. Some chickens grow so large that their legs cannot support their outsized bodies, and they suffer from starvation or dehydration when they can’t walk to reach food and water.
+        </li>
+        <li>
+            Many fish on aquafarms suffer from parasitic infections, diseases, and debilitating injuries. Conditions on some farms are so horrendous that millions of fish die before farmers can kill and package them for food.
+        </li>
+        <li>
+            In the foie gras industry, pipes or tubes are shoved down the throats of ducks and geese three times daily so that 4 pounds of grain can be pumped into their stomachs to produce the diseased “fatty liver” that some diners consider a delicacy.
+        </li>
+        <li>
+            Babies are torn away from the sides of their loving mothers, and the nourishment that the mothers long to provide their offspring is instead shipped off for human consumption.
+        </li>
+    </ul>
+
+    <h2>
+        What About Animals on ‘Humane’ Farms?
+    </h2>
+
+    <p class="paragraph">
+        Animals on organic and “free-range” farms often endure the same cruel mutilations as those on other farms. At the end of their miserable lives, these animals are typically shipped on trucks to the same slaughterhouses used by massive factory farms.
+
+        Remember: “Organic,” “natural,” “humane,” “pasture-raised,” “grass-fed,” and “free-range” are just labels. The meat, eggs, and milk stamped with them are filled with the same artery-clogging saturated fat and cholesterol as all other animal-derived foods. These labels represent little more than efforts to make consumers feel better—they often mean little to nothing for the animals involved. The only truly humane foods are vegan ones.
+    </p>
+
+    <h2>
+        How Animals Used for Food Are Killed
+    </h2>
+
+    <p class="paragraph">
+        When their bodies wear out from producing milk or eggs, animals raised for food are crowded onto trucks and transported for miles through all weather extremes, typically without food or water. At the slaughterhouse, the throats of those who survived the transport are slit, often while they’re still conscious. Many remain alert when they’re plunged into the scalding-hot water of the defeathering or hair-removal tanks. Some are even still awake while their bodies are being skinned or hacked apart. Most animals killed for food are practically babies, slaughtered after just a few months—far short of their natural life expectancy.
+    </p>
+
+    <h2>
+        The Perks of Going Vegan
+    </h2>
+
+    <p class="paragraph">
+        Going vegan is also good for your health. There is no nutritional need for humans to eat any animal product. All our dietary needs—even as infants and children—are best supplied by a meatless diet. The Academy of Nutrition and Dietetics notes that eating plant-based foods reduces the risk of suffering from many chronic degenerative diseases and conditions, including heart disease, cancer, hypertension, diabetes, and obesity.
+
+        Raising animals for food requires massive amounts of resources. Two-thirds of all agricultural land in the U.S. is used to raise animals for food or to grow grain to feed them. Chickens, pigs, cattle, and other animals raised for food are the primary consumers of water in the U.S.: A single pig consumes 21 gallons of drinking water per day, while a cow on a dairy farm drinks as much as 50 gallons daily. Farms produce billions of pounds of manure daily, which ends up in lakes, rivers, and even drinking water.
+    </p>
+</div>
+
+
+
+<!-- 
+<img src="{{url_for('static', filename = 'fur.jpg')}}" alt="fur">
+<ul>
+    <li>Fur industry</li>
+    <li>Leather industry</li>    
+    <li>Silk industry</li>
+</ul> -->
+{% endblock %}

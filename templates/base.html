@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename = 'card.css')}}"> -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Animal Abuse {% block title %}{% endblock %}</title>
+</head>
+<body onload="StartKillCounter()">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+        <label class="logo">One<span>World</span></label>
+
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="farming">FARMING</a></li>
+            <li><a href="hunting">HUNTING</a></li>
+            <li><a href="chatbot">CHATBOT</a></li>
+            <li><a href="food">FOOD INDUSTRY</a></li>
+            <li><a href="about">ABOUT US</a></li>
+            <li><a href="contact">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <section></section>
+      <button class="dark_mode" onclick="darkMode()">
+                Dark Mode
+            </button>
+      <!-- <li><a href="#">Meat industry</a></li>
+                    <li><a href="#">Dairy industry</a></li>
+                    <li><a href="#">Egg industry</a></li> -->
+                         <!-- <i class="fa fa-caret-down"></i>
+                <div class="dropdown-content"> -->
+    
+    {% block content %}
+    {% endblock %}
+
+    <!-- <div class="container-chat"> -->
+        <!--Chat bot-->
+        <!-- <div class="chat-bot"> -->
+            <!--client-->
+            <!-- <div class="client">
+                <img src="/static/images/logo.png" alt="logo" />
+                <div class="client-info">
+                    <h2>OneWorld</h2>
+                    <p>Online</p>
+                </div>
+            </div> -->
+
+            <!-- Main Chat Section-->
+            <!-- <div class="chats">
+                <div class="client-chat">Hi!</div>
+                <div class="my-chat">Hey!</div>
+                <div class="client-chat">How can i help you?</div>
+                <div class="my-chat">Are you fully functional?</div>
+                <div class="client-chat">Not Quite, i need linking to the Flask app</div>
+            </div> -->
+
+            <!-- input field section -->
+            <!-- <div class="chat-input">
+                <input type="text" placeholder="Enter Message"/>
+                <button class="send-btn">
+                    <img src="/static/images/send.png" alt="send-btn">
+                </button>
+            </div>
+        </div> -->
+
+        <!-- Button -->
+        <!-- <div class="chat-btn">
+            <img src="/static/images/robo.png" alt="chat box icon btn">
+        </div> -->
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="box">
+                <h3>Animals also have Rights</h3>
+                <p>Almost all of us grew up eating meat, wearing leather, and going to circuses and zoos. We never considered the impact of these actions on the animals involved. For whatever reason, you are now asking the question: Why should animals have rights?</p>
+                <div class="social_h">
+                    <a href="https://en-gb.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/en/" target="_blank"><i class="fab fa-tiktok"></i></a>
+                  </div>
+            </div>
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="/">Home</a>
+                <a href="farming">FARMING</a>
+                <a href="hunting">HUNTING</a>
+                <a href="chatbot">CHATBOT</a>
+                <a href="food">FOOD INDUSTRY</a>
+                <a href="about">ABOUT</a>
+                <a href="contact">CONTACT US</a>
+
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>Stay up to date on the latest vegan trends and get breaking animal rights news delivered straight to your inbox!</p>
+                <input type="email" placeholder="your email">
+                <button type="submit" class="btn">Subscribe</button>
+
+                <!-- <form action="">
+                   <input type="email" placeholder="your email">
+                   <div class="popup-container">
+                    <button type="submit" class="btn" onclick="openPopup()">Subscribe</button>
+                    <div class="popup" id="popup">
+                        <img src="/static/images/tick.png" alt="tick">
+                        <h1>Thank you!</h1>
+                        <p>You have been successfully subscribed. Thanks!</p>
+                        <button type="button" onclick="closePopup()">OK</button>
+                    </div>
+                   </div>
+               </form> -->
+               <!-- <div class="popup" id="popup">
+                <img src="/static/images/tick.png" alt="tick">
+                <h1>Thank you!</h1>
+                <p>You have been successfully subscribed. Thanks!</p>
+                <button type="button" onclick="closePopup()">OK</button>
+                </div> -->
+               <!-- <div class="popup-container">
+                   <div class="popup">
+                       <img src="/static/images/tick.png" alt="tick">
+                       <h2>Thank you!</h2>
+                       <p>You have been successfully subscribed. Thanks!</p>
+                       <button type="button">OK</button>
+                   </div>
+               </div> -->
+            </div>
+            <!-- <div class="chat-btn">
+            <img src="/static/images/robo.png" alt="chat box icon btn">
+        </div> -->
+        </div>
+    </div>
+    <script>
+        let popup = document.getElementById("popup")
+
+        function openPopup() {
+            popup.classList.add("open-popup")
+        }
+        function closePopup() {
+            popup.classList.remove("open-popup")
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>    
+
+</body>
+</html> 

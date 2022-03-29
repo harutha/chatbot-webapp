@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'card.css')}}">
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Animal Abuse {% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+        <label class="logo">One<span>World</span></label>
+
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="farming">FARMING</a></li>
+            <li><a href="hunting">HUNTING</a></li>
+            <li><a href="chatbot">CHATBOT</a></li>
+            <li><a href="food">FOOD INDUSTRY</a></li>
+            <li><a href="about">ABOUT US</a></li>
+            <li><a href="contact">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <section></section>
+      <button class="dark_mode" onclick="darkMode()">
+                Dark Mode
+            </button>
+
+    <div class="product_container">
+        <div class="product">
+    
+            <img src="/static/images/cow.png" id="frontImg">
+            <img src="/static/images/burger.png" id="backImg">
+    
+            <div class="product-inner" id="productBox">
+                <div class="product-front">
+                    <div class="product-top">
+                        <h1>Cow</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>How I Should Look</p>
+                        <h1>Cost <span>Freedom</span></h1>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="/static/images/cow.png">
+                            <div class="select-item">
+                                <img src="/static/images/burger.png" onclick="flipRight()">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+                    <div class="product-top product-top2">
+                        <h1>Cow</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <h1>But</h1>
+                        <p>With Me On Your Plate!</p>
+                        <h1>Cost <span>murdered</span></h1>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="/static/images/cow.png" onclick="flipLeft()">
+                            <div class="select-item">
+                                <img src="/static/images/burger.png">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-side"></div>
+                <div class="right-side"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="box">
+                <h3>Animals also have Rights</h3>
+                <p>Almost all of us grew up eating meat, wearing leather, and going to circuses and zoos. We never considered the impact of these actions on the animals involved. For whatever reason, you are now asking the question: Why should animals have rights?</p>
+                <div class="social_h">
+                    <a href="https://en-gb.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/en/"><i class="fab fa-tiktok"></i></a>
+                  </div>
+            </div>
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="/">Home</a>
+                <a href="farming">FARMING</a>
+                <a href="hunting">HUNTING</a>
+                <a href="chatbot">CHATBOT</a>
+                <a href="food">FOOD INDUSTRY</a>
+                <a href="about">ABOUT</a>
+                <a href="contact">CONTACT US</a>
+
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>Stay up to date on the latest vegan trends and get breaking animal rights news delivered straight to your inbox!</p>
+               <form action="">
+                   <input type="email" placeholder="your email">
+                   <input type="submit" class="btn" value="subscribe">
+               </form>
+
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+
+
+
+<script>
+    var productBox = document.getElementById("productBox");
+    var frontImg = document.getElementById("frontImg");
+    var backImg = document.getElementById("backImg");
+
+    function bgcolor(){
+        document.body.style.background = "black";
+    }
+    
+    function flipRight(){
+        productBox.style.transform = "rotateY(180deg)";
+        frontImg.style.left = "650px";
+        backImg.style.left = "20px";
+        frontImg.style.transform = "rotate(-30deg)";
+        backImg.style.transform = "rotate(0deg)";
+    }
+    function flipLeft(){
+        productBox.style.transform = "rotateY(0deg)";
+        frontImg.style.left = "20px";
+        backImg.style.left = "-650px";
+        frontImg.style.transform = "rotate(0deg)";
+        backImg.style.transform = "rotate(-30deg)";
+    }
+    
+    </script>
